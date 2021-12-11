@@ -57,4 +57,4 @@ You can still achieve the blown out highlight look with filmic transform but not
 
 ## Example blend file
 
-[stacked_lights.blend](/asset/stacked_lights.blend)
+[stacked_lights.blend](https://github.com/thompson-vii/fivsh/blob/master/asset/stacked_lights.blend)
