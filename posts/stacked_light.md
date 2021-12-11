@@ -43,7 +43,7 @@ This light has a limited bounce to avoid tinting the indirects red. Below is wit
 This is with the same parameters as the srgb set up. 
 ![Filmic render](/img/stacked_lights/no_filmic.png)
 
-You can still achieve the blown out highlight look with filmic transform but not without some tweaking. The default filmic transform compresses highlight area, so increasing the strength of the sun lamp is needed. The scene will be overall more illuminated and less saturated. The color falloff is also less pronounced. 
+You can still achieve the blown out highlight look with filmic transform but not without some tweaking. Filmic compresses highlight and reduces color saturation, increasing the strength of the sun lamp is a necessity. The scene will be overall more illuminated and less saturated. The color falloff is also less pronounced. 
 
 ![Filmic render adjusted](/img/stacked_lights/yes_filmic.png)
 - Color management:
