@@ -159,6 +159,37 @@ code {
   text-decoration: none;
 }
 
+/* Clears */
+html, body{
+  margin-right:unset;
+}
+
+@media only screen and (max-width: 600px) {
+  header{
+      width:500px;
+      display:block;
+  }
+
+  header > a > img {
+    height:50px;
+    width:50px;
+  }
+
+  header > ul{
+    margin: 5% 5% 5% 0%;
+  }
+
+  body{
+    display:block;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .nav{
+    flex-direction:row;
+  }
+}
+
 /* Nav */
 .nav {
   padding: 0;
