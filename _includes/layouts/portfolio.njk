@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-port
+---
+
+<h1>Portfolio</h1>
+
+{{ content | safe }}
+
+{% for port in collections.portfolio %}
+  <article>
+    <h1>
+        <a href="{{ port.url | url}}">{{ port.data.title }}</a>
+    </h1>
+  </article>
+{% endfor %}
+

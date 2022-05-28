@@ -55,9 +55,14 @@ p:last-child {
 }
 p,
 .tmpl-post li,
+
 img {
-  max-width: 37.5em; /* 600px /16 */
+  width:100%;
+  height:auto;
+  max-width:45vw;
+  margin:auto;
 }
+
 p,
 .tmpl-post li {
   line-height: 1.45;
@@ -307,3 +312,13 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link:visited {
   color: #aaa;
 }
+
+.sidebyside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.sidebyside-item {
+}
+

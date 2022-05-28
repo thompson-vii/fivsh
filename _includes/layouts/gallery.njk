@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+templateClass: tpml-gallery
+---
+
+<script type="module">
+  import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.js';
+  const options = {
+    gallery: '#my-gallery',
+    children: 'a',
+    pswpModule: () => import('/photoswipe/dist/photoswipe.esm.js')
+  };
+  const lightbox = new PhotoSwipeLightbox(options);
+  lightbox.init();
+
+</script>
+
+
+

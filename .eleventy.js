@@ -5,6 +5,9 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require("markdown-it-attrs");
+const glob = require("glob-promise");
+const path = require('path');
 
 module.exports = function(eleventyConfig) {
   // Add plugins
@@ -63,13 +66,15 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("photoswipe");
+  eleventyConfig.addPassthroughCopy("img200");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
     linkify: true
-  }).use(markdownItAnchor, {
+  }).use(markdownItAnchor, markdownItAttrs, {
     permalink: markdownItAnchor.permalink.ariaHidden({
       placement: "after",
       class: "direct-link",
@@ -97,6 +102,25 @@ module.exports = function(eleventyConfig) {
     ui: false,
     ghostMode: false
   });
+
+  eleventyConfig.addPairedShortcode(
+    "gallery", (content) => {
+      return `<div class="pswp-galllery id="my-gallery>${content}</div>`
+    }
+  )
+
+
+  eleventyConfig.addPairedShortcode(
+    "sidebyside", (data) => {
+      const galleryContent = markdownLibrary.render(data);
+      return `<div class="sidebyside">${data}</div>`;
+    }
+  );
+
+  eleventyConfig.addShortcode("image", (src, href, alt, width, height) => {
+    return `<a href="${href}" data-pswp-width="${width}" data-pswp-height="${height}" target="_blank"><img src="${src}" alt="${alt}" loading="lazy"></a>`
+  });
+
 
   return {
     // Control which files Eleventy will process
