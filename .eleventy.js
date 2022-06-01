@@ -118,7 +118,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addShortcode("image",  function(url) {
     thumbnail_path = url.replace("img", "img200");
-    return `<a href="${url}" ><img href="${thumbnail_path}"></img></a>`
+    return `<a href="${url}" ><img src="${thumbnail_path}"></img></a>`
   });
   
   /** 
