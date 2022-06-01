@@ -67,6 +67,15 @@ p,
 .tmpl-post li {
   line-height: 1.45;
 }
+
+main > p {
+  margin: 10px 0px 1px 0px;
+}
+
+main > h2 {
+  max-width: 45vw;
+}
+
 a[href] {
   color: var(--blue);
 }
@@ -172,12 +181,14 @@ html, body{
 @media only screen and (max-width: 600px) {
   header{
       width:500px;
-      display:block;
+      display: flex;
+      flex-direction: row;
   }
 
   header > a > img {
     height:50px;
     width:50px;
+
   }
 
   header > ul{
@@ -185,14 +196,26 @@ html, body{
   }
 
   body{
-    display:block;
+    display:flex;
+    flex-direction: column;
     width:100%;
-    margin-left:auto;
-    margin-right:auto;
+    align-items: center;
   }
   .nav{
     flex-direction:row;
   }
+
+  p, .tmpl-post, img, li, main > h2 {
+    max-width: 85vw;
+  }
+
+  .tmpl-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
 }
 
 /* Nav */
@@ -320,5 +343,10 @@ a[href].direct-link:focus:visited,
 }
 
 .sidebyside-item {
+}
+
+code {
+  color: white;
+  background-color: rgb(39, 54, 43);
 }
 
