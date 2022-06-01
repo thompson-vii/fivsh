@@ -6,7 +6,6 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
-const glob = require("glob-promise");
 const path = require('path');
 
 module.exports = function(eleventyConfig) {
@@ -117,10 +116,16 @@ module.exports = function(eleventyConfig) {
     }
   );
 
+  eleventyConfig.addShortcode("image",  function(url) {
+    thumbnail_path = url.replace("img", "img200");
+    return `<a href="${url}" ><img href="${thumbnail_path}"></img></a>`
+  });
+  
+  /** 
   eleventyConfig.addShortcode("image", (src, href, alt, width, height) => {
     return `<a href="${href}" data-pswp-width="${width}" data-pswp-height="${height}" target="_blank"><img src="${src}" alt="${alt}" loading="lazy"></a>`
   });
-
+  **/
 
   return {
     // Control which files Eleventy will process
