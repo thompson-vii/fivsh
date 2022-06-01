@@ -8,32 +8,37 @@ from PIL import Image
 from numpy import source
 
 logging.basicConfig(level=logging.INFO)
+W  = '\033[0m'  # white (normal)
+R  = '\033[31m' # red
+G  = '\033[32m' # green
+O  = '\033[33m' # orange
+B  = '\033[34m' # blue
+P  = '\033[35m' # purple
 
 def write_fullres_to_thumb(fullres_path, thumbnail_path, dry_run=False):
-    logging.info("Check if thumbnail directory exists...")
     if os.path.isdir(Path(thumbnail_path).parent):
-        logging.info("{thumbnail_path} exists, skipping.")
+        logging.info(f"{W}{thumbnail_path} exists.")
         pass
     else:
         Path(thumbnail_path).parent.mkdir(parents=True, exist_ok=True)
-        logging.info(f"{thumbnail_path} created")
+        logging.info(f"{W}[DIR]{thumbnail_path} created.")
 
     if dry_run:
-        logging.info(f"Dry run, {thumbnail_path} not modified")
+        logging.info(f"{W}[DRYRUN], {thumbnail_path} not modified")
     else:
-        logging.info(f"Copying file from: {fullres_path} to {thumbnail_path}")
+        logging.info(f"{G}[COPY] from: {fullres_path} to {thumbnail_path}")
         shutil.copy(fullres_path, thumbnail_path)   
         with Image.open(thumbnail_path) as img:     
             img.thumbnail(THUMBNAIL_MAX_SIZE)
             img.save(thumbnail_path)
-            logging.info(f"{thumbnail_path} generated. {img.size}")
+            logging.info(f"{G} [THUMBNAIL]{thumbnail_path} generated. {img.size}")
 
 ROOT = Path(__file__)
 FULLRES_PATH = ROOT.parent.joinpath("img")
 THUMBNAIL_PATH = ROOT.parent.joinpath("img200")
 EXT = ['.jpg', '.png', '.jpeg'] # needs period for suffix
 
-THUMBNAIL_MAX_SIZE = (200, 800)
+THUMBNAIL_MAX_SIZE = (400, 800)
 
 logging.info(f"Fullres Image Path: {FULLRES_PATH}")
 logging.info(f"Thumbnail Image Path: {THUMBNAIL_PATH}")
@@ -57,7 +62,7 @@ logging.info(f"Number of thumbnails: {len(thumbnail_images)}")
 
 
 if len(fullres_images) != len(thumbnail_images):
-    logging.warning(f"{len(missing_images)} thumbnails missing")
+    logging.warning(f"{O}{len(missing_images)} thumbnails missing")
     for _, miss in missing_images:
         logging.info(miss)
 
@@ -68,4 +73,4 @@ if missing_images:
 
         write_fullres_to_thumb(og_img_path, new_thumbnail_path, dry_run=False)
 else:
-    logging.info("All thumbnail present. Nothing done")
+    logging.info(f"{G} All thumbnail present. Nothing done")
