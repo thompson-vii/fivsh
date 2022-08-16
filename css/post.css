@@ -12,7 +12,7 @@ body {
 
 header {
 	display:flex;
-	flex-direction: column;
+  flex-direction: column;
 	width: auto;
 }
 
@@ -133,4 +133,19 @@ code {
   }
 }
 
+html > body > header > footer {
+  width: auto;
+  margin: 16px;
+}
 
+.rss-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.rss-links > object  {
+  padding-right: 5px;
+  width: 2vh;
+  height: auto;
+}

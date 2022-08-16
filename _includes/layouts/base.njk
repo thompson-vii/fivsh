@@ -15,7 +15,7 @@
   <body>
     <header>
       
-      <a href="{{ '/' | url }}" class="home">
+      <a href="{{ '/' | url }}" class="home logo">
       <img src="/img/logo.png" alt="Why hire an artist when I can make my own logo?" width="100" height="100">
       </a>
 
@@ -25,6 +25,12 @@
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
+      <footer>
+            <div class="rss-links">
+              <object data="/icon/rss.svg" type="image/svg+xml"></object>
+              <a href="/feed/feed.xml" target="_blank"> RSS feed </a>
+            </div>
+      </footer>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
@@ -33,8 +39,6 @@
 
       {{ content | safe }}
     </main>
-
-    <footer></footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
