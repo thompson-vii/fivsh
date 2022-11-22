@@ -37,6 +37,6 @@
     "glob-promise": "^4.2.2",
     "markdown-it-attrs": "^4.1.4",
     "markdown-it-classy": "^0.2.0",
-    "photoswipe": "^5.2.7"
+    "photoswipe": "^5.3.3"
   }
 }

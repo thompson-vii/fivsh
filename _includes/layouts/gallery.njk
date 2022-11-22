@@ -4,14 +4,16 @@ templateClass: tmpl-gallery
 ---
 
 <script type="module">
-  import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.js';
-  const options = {
-    gallery: '#my-gallery',
-    children: 'a',
-    pswpModule: () => import('/photoswipe/dist/photoswipe.esm.js')
-  };
-  const lightbox = new PhotoSwipeLightbox(options);
-  lightbox.init();
+import PhotoSwipeLightbox from "/photoswipe/lightbox";
+import "/photoswipe/style.css";
+
+const lightbox = new PhotoSwipeLightbox({
+  gallery: "#my-gallery",
+  children: "a",
+  pswpModule: () => import("/photoswipe")
+});
+
+lightbox.init();
 
 </script>
 
