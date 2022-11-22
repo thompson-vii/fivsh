@@ -32,12 +32,36 @@
         "height": 1080
     },
     {
+        "filename": "rose0001.png",
+        "thumbnail_path": "/img200/portfolio/rose0001.png",
+        "fullres_path": "/img/portfolio/rose0001.png",
+        "alt": "",
+        "width": 1253,
+        "height": 1800
+    },
+    {
+        "filename": "pepr_cream_octane.png",
+        "thumbnail_path": "/img200/portfolio/pepr_cream_octane.png",
+        "fullres_path": "/img/portfolio/pepr_cream_octane.png",
+        "alt": "",
+        "width": 1771,
+        "height": 1097
+    },
+    {
         "filename": "starsector_drug.png",
         "thumbnail_path": "/img200/portfolio/starsector_drug.png",
         "fullres_path": "/img/portfolio/starsector_drug.png",
         "alt": "",
         "width": 1834,
         "height": 1064
+    },
+    {
+        "filename": "final_render_chain_fix.png",
+        "thumbnail_path": "/img200/portfolio/final_render_chain_fix.png",
+        "fullres_path": "/img/portfolio/final_render_chain_fix.png",
+        "alt": "",
+        "width": 1920,
+        "height": 1080
     },
     {
         "filename": "TAC-HAM_cover.png",
