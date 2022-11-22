@@ -105,7 +105,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPairedShortcode(
     "gallery", (content) => {
-      return `<div class="pswp-galllery id="my-gallery>${content}</div>`
+      return `<div class="pswp-gallery" id="my-gallery">${content}</div>`
     }
   )
 
@@ -117,16 +117,20 @@ module.exports = function(eleventyConfig) {
     }
   );
 
+  eleventyConfig.addShortcode("image_jpg",  function(url) {
+    thumbnail_path = url.replace("img", "img200");
+    let jpg_path = thumbnail_path.split('/').pop();
+    let parts = jpg_path.split('.');
+    parts.pop();
+    jpg_path = parts.join('.');
+    return `<a href="${url}" ><img src="${jpg_path}"></img></a>`
+  });
+  
+  
   eleventyConfig.addShortcode("image",  function(url) {
     thumbnail_path = url.replace("img", "img200");
     return `<a href="${url}" ><img src="${thumbnail_path}"></img></a>`
   });
-  
-  /** 
-  eleventyConfig.addShortcode("image", (src, href, alt, width, height) => {
-    return `<a href="${href}" data-pswp-width="${width}" data-pswp-height="${height}" target="_blank"><img src="${src}" alt="${alt}" loading="lazy"></a>`
-  });
-  **/
 
   return {
     // Control which files Eleventy will process

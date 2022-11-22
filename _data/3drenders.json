@@ -1,0 +1,58 @@
+[
+    {
+        "filename": "forest5_proc.jpg",
+        "thumbnail_path": "/img200/portfolio/forest5_proc.jpg",
+        "fullres_path": "/img/portfolio/forest5_proc.jpg",
+        "alt": "",
+        "width": 1920,
+        "height": 1376
+    },
+    {
+        "filename": "room_bar.jpg",
+        "thumbnail_path": "/img200/portfolio/room_bar.jpg",
+        "fullres_path": "/img/portfolio/room_bar.jpg",
+        "alt": "",
+        "width": 2912,
+        "height": 1820
+    },
+    {
+        "filename": "alley.png",
+        "thumbnail_path": "/img200/portfolio/alley.png",
+        "fullres_path": "/img/portfolio/alley.png",
+        "alt": "",
+        "width": 3042,
+        "height": 2750
+    },
+    {
+        "filename": "volatile_render.png",
+        "thumbnail_path": "/img200/portfolio/volatile_render.png",
+        "fullres_path": "/img/portfolio/volatile_render.png",
+        "alt": "",
+        "width": 1920,
+        "height": 1080
+    },
+    {
+        "filename": "starsector_drug.png",
+        "thumbnail_path": "/img200/portfolio/starsector_drug.png",
+        "fullres_path": "/img/portfolio/starsector_drug.png",
+        "alt": "",
+        "width": 1834,
+        "height": 1064
+    },
+    {
+        "filename": "TAC-HAM_cover.png",
+        "thumbnail_path": "/img200/portfolio/TAC-HAM_cover.png",
+        "fullres_path": "/img/portfolio/TAC-HAM_cover.png",
+        "alt": "",
+        "width": 2481,
+        "height": 3508
+    },
+    {
+        "filename": "landmine.png",
+        "thumbnail_path": "/img200/portfolio/landmine.png",
+        "fullres_path": "/img/portfolio/landmine.png",
+        "alt": "",
+        "width": 1920,
+        "height": 1080
+    }
+]

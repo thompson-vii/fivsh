@@ -51,6 +51,11 @@ p, .tmpl-post, li, img {
   margin:1em;
 }
 
+.tmpl-gallery {
+  width: 100vh;
+}
+
+
 p, .tmpl-post, li {
   line-height: 1.45;
 }
@@ -118,6 +123,10 @@ code {
     max-width:35vw;
   }
 
+  .tmpl-gallery {
+    width: 50vh;
+  }
+
   .tmpl-post {
     display: flex;
     flex-direction: column;
@@ -148,4 +157,36 @@ html > body > header > footer {
   padding-right: 5px;
   width: 2vh;
   height: auto;
+}
+
+.pswp-gallery {
+  columns:300px;
+  column-gap: 20px;
+}
+
+/* with wrapped div for each anchor 
+.gallery-item {
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
+  filter: drop-shadow(15px 10px 0px #3878d1);
+  border-radius: 5px;
+}
+
+.gallery-item > a > img {  masonry item width 
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+*/
+
+#my-gallery a {
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
+  filter: drop-shadow(15px 10px 0px #3878d1);
+  border-radius: 5px;
+}
+
+#my-gallery > a > img { /* masonry item width */
+  max-width: 300px;
+  border-radius: 15px;
 }
