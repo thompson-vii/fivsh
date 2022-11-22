@@ -3,18 +3,15 @@ layout: layouts/base.njk
 templateClass: tmpl-gallery
 ---
 
+<link rel="stylesheet" href="/photoswipe/dist/photoswipe.css">
 <script type="module">
-import PhotoSwipeLightbox from "/photoswipe/lightbox";
-import "/photoswipe/style.css";
-
+import PhotoSwipeLightbox from '/photoswipe/dist/photoswipe-lightbox.esm.js';
 const lightbox = new PhotoSwipeLightbox({
-  gallery: "#my-gallery",
-  children: "a",
-  pswpModule: () => import("/photoswipe")
+  gallery: '#my-gallery',
+  children: 'a',
+  pswpModule: () => import('/photoswipe/dist/photoswipe.esm.js')
 });
-
 lightbox.init();
-
 </script>
 
 {{ content | safe }}
