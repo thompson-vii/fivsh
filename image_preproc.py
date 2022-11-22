@@ -8,7 +8,7 @@ import imagesize
 logging.basicConfig(level=logging.INFO)
 
 # list of (post_name, post_dir, dir_fullres, dir_thumbnail)
-PROC_DIR = [("environment", "./portfolio/", "./img/portfolio/", "./img200/portfolio/"),
+PROC_DIR = [("3drenders", "./portfolio/", "./img/portfolio/", "./img200/portfolio/"),
             ]
 OUTPUT_DIR = "./_data/"
 EXT = ('*.jpg', '*.png', '*.jpeg')
