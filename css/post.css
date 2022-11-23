@@ -140,45 +140,35 @@ code {
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
   }
-}
 
 html > body > header > footer {
   width: auto;
   margin: 16px;
+  .social-link>a>i {
+    margin: 9px;
+    pointer-events: none;
+    font-size: 20px;
+  }
+
+  .social-link>a {
+    font-size: 0;
+  }
 }
 
 .social-link {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  margin-bottom: 10px;
+  justify-content: center;
 }
 
-.social-link > object  {
-  padding-right: 5px;
-  width: 2vh;
-  height: auto;
+.social-link>a>i {
+  padding: 5px 10px 5px 10px;
 }
 
 .pswp-gallery {
   columns:300px;
   column-gap: 20px;
 }
-
-/* with wrapped div for each anchor 
-.gallery-item {
-  break-inside: avoid-column;
-  margin-bottom: 1rem;
-  filter: drop-shadow(15px 10px 0px #3878d1);
-  border-radius: 5px;
-}
-
-.gallery-item > a > img {  masonry item width 
-  max-width: 300px;
-  border-radius: 15px;
-}
-
-*/
 
 #my-gallery a {
   break-inside: avoid-column;

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/post.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/fontawesome.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/brands.min.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/solid.min.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
     <link rel="stylesheet" href="{{ '/photoswipe/dist/photoswipe.css' | url }}" media="print" onload="this.media='all'">  
@@ -25,24 +28,35 @@
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
       {%- endfor %}
       </ul>
-      <footer>
-            <div class="social-link">
-              <object data="/icon/rss.svg" type="image/svg+xml"></object>
-              <a href="/feed/feed.xml" target="_blank"> RSS feed </a>
-            </div>
-           <div class="social-link">
-              <object data="/icon/twitter.svg" type="image/svg+xml"></object>
-              <a href="https://www.twitter.com/kolloom1" target="_blank"> Twitter </a>
-            </div>
-           <div class="social-link">
-              <object data="/icon/discord.svg" type="image/svg+xml"></object>
-              <a href="javascript:void(0);"> kolloom#4564 </a>
-            </div>
-           <div class="social-link">
-              <object data="/icon/email.svg" type="image/svg+xml"></object>
-              <a href="mailto: fivshme@outlook.com" target="_blank"> eMail </a>
-            </div>                                    
-      </footer>
+
+    </header>
+    <footer>
+      <div class="social-link">
+        <a href="/feed/feed.xml" target="_blank">
+          <i class="fa-solid fa-rss"></i>
+          RSS feed
+        </a>
+      </div>
+      <div class="social-link">
+        <a href="https://www.twitter.com/kolloom1" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+          Twitter
+        </a>
+      </div>
+      <div class="social-link">
+        <a href="javascript:void(0);">
+          <i class="fa-brands fa-discord"></i>kolloom#4564
+        </a>
+      </div>
+      <div class="social-link">
+        <a href="mailto: fivshme@outlook.com" target="_blank">
+          <i class="fa-solid fa-envelope"></i>eMail
+        </a>
+      </div>
+      <div class="social-link">
+        <p>© 2022 JBY</p>
+      </div>
+    </footer>
     </header>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
