@@ -16,17 +16,18 @@
     <link rel="stylesheet" href="{{ '/photoswipe/dist/photoswipe.css' | url }}" media="print" onload="this.media='all'">
   </head>
   <body>
+    <div class="flex1">
     <header>
-      
+
       <a href="{{ '/' | url }}" class="home logo">
       <img src="/img/logo.png" alt="Why hire an artist when I can make my own logo?" width="100" height="100">
       </a>
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
+        {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
+        {%- endfor %}
       </ul>
 
     </header>
@@ -58,7 +59,7 @@
       </div>
     </footer>
     </header>
-
+    </div>
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 
       

@@ -1,19 +1,16 @@
-
-html,
 body {
   display:flex;
   flex-direction: row;
-  justify-content:center;
-  padding: 0;
   font-family: -apple-system, system-ui, sans-serif;
   color: var(--darkgray);
   background-color: var(--white);
+  margin: 0em 3em 0em 3em;
+  justify-content: center;
 }
 
 header {
 	display:flex;
   flex-direction: column;
-	width: auto;
 }
 
 header > img {
@@ -24,14 +21,18 @@ header > ul > li {
   margin: 5px 0;
 }
 
+footer {
+  min-width: 145px; /* prevent discord link overflow */
+}
+
 .home {
-	align-self: center;
+  align-self: center;
 }
 
 .nav {
 	display:flex;
-	flex-direction: column;
-	align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 p:last-child {
@@ -46,13 +47,11 @@ p:last-child {
   max-height: 400px;
   max-width: min(30vw, 300px);
 }
-p, .tmpl-post, li, img {
-  /*width:100%; */
-  margin:1em;
-}
 
-.tmpl-gallery {
-  width: 100vh;
+p,
+.tmpl-post,
+li{
+  margin: 1em;
 }
 
 
@@ -69,9 +68,13 @@ p, .tmpl-post, li {
 }
 
 .sidebyside {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   max-width: 40vw;
+}
+
+.sidebyside > a > img {
+  margin: 0em 1em 0em 1em;
 }
 
 code {
@@ -83,9 +86,9 @@ code {
 
 @media only screen and (max-width: 600px) {
   header{
-      width: auto;
-      display: flex;
-      flex-direction: row;
+    width: auto;
+    display: flex;
+    flex-direction: row;
   }
 
   header > a > img {
@@ -100,7 +103,8 @@ code {
   body{
     display:flex;
     flex-direction: column;
-    width:100%;
+    width: 100%;
+    margin: 0px;
     align-items: center;
   }
   .nav{
@@ -133,7 +137,7 @@ code {
     align-items: center;
     max-width:90vw;
   }
-  
+
   .sidebyside {
     max-width: 100%;
     display: grid;
@@ -141,9 +145,14 @@ code {
     grid-gap: 5px;
   }
 
-html > body > header > footer {
-  width: auto;
-  margin: 16px;
+  footer {
+    display: flex;
+    flex-direction: row;
+    FLEX: NONE;
+    flex-wrap: wrap;
+    padding-right: 35px;
+  }
+
   .social-link>a>i {
     margin: 9px;
     pointer-events: none;
@@ -165,6 +174,10 @@ html > body > header > footer {
   padding: 5px 10px 5px 10px;
 }
 
+.tmpl-gallery {
+  width: 100vh;
+}
+
 .pswp-gallery {
   columns:300px;
   column-gap: 20px;
@@ -180,4 +193,5 @@ html > body > header > footer {
 #my-gallery > a > img { /* masonry item width */
   max-width: 300px;
   border-radius: 15px;
+  margin: 10px;
 }
