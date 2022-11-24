@@ -70,7 +70,7 @@ module.exports = function(eleventyConfig) {
     "node_modules/photoswipe/": "/photoswipe/"
   });
   eleventyConfig.addPassthroughCopy("img200");
-  eleventyConfig.addPassthroughCopy("icon");
+  eleventyConfig.addPassthroughCopy("webfonts");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
