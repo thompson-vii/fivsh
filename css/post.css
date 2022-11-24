@@ -84,6 +84,29 @@ code {
   outline-width: 1px;
 }
 
+
+.tmpl-gallery {
+  width: 100vh;
+}
+
+.pswp-gallery {
+  columns:300px;
+  column-gap: 20px;
+}
+
+#my-gallery a {
+  break-inside: avoid-column;
+  margin-bottom: 1rem;
+  filter: drop-shadow(15px 10px 0px #3878d1);
+  border-radius: 5px;
+}
+
+#my-gallery > a > img { /* masonry item width */
+  max-width: 300px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
 @media only screen and (max-width: 600px) {
   header{
     width: auto;
@@ -172,26 +195,4 @@ code {
 
 .social-link>a>i {
   padding: 5px 10px 5px 10px;
-}
-
-.tmpl-gallery {
-  width: 100vh;
-}
-
-.pswp-gallery {
-  columns:300px;
-  column-gap: 20px;
-}
-
-#my-gallery a {
-  break-inside: avoid-column;
-  margin-bottom: 1rem;
-  filter: drop-shadow(15px 10px 0px #3878d1);
-  border-radius: 5px;
-}
-
-#my-gallery > a > img { /* masonry item width */
-  max-width: 300px;
-  border-radius: 15px;
-  margin: 10px;
 }
