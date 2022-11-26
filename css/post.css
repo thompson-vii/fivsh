@@ -177,7 +177,7 @@ code {
     flex-direction: row;
     FLEX: NONE;
     flex-wrap: wrap;
-    padding-right: 35px;
+    justify-content: center;
   }
 
   .social-link>a>i {
