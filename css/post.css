@@ -35,6 +35,10 @@ footer {
   align-items: center;
 }
 
+.nav-item > i {
+  padding: 5px 10px 5px 10px;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
