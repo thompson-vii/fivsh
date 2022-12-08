@@ -16,6 +16,14 @@
         "height": 1820
     },
     {
+        "filename": "crate_chroma.jpg",
+        "thumbnail_path": "/img200/portfolio/crate_chroma.jpg",
+        "fullres_path": "/img/portfolio/crate_chroma.jpg",
+        "alt": "",
+        "width": 2000,
+        "height": 2000
+    },
+    {
         "filename": "alley.png",
         "thumbnail_path": "/img200/portfolio/alley.png",
         "fullres_path": "/img/portfolio/alley.png",
