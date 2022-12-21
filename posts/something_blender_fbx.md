@@ -1,7 +1,7 @@
 ---
 title: Blender just can't handle FBX animation 
 description: 
-date: 
+date: 2022-08-03
 tags:
 	- Animation
 layout: layouts/post.njk
