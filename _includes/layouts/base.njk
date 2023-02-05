@@ -7,6 +7,7 @@
     <meta name="description" content="{{ description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/post.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/mobile.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/fontawesome.min.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/brands.min.css' | url }}">
@@ -21,9 +22,22 @@
     <div class="flex1">
     <header>
 
-      <a href="{{ '/' | url }}" class="home logo">
-      <img src="/img/logo.png" alt="Why hire an artist when I can make my own logo?" width="100" height="100">
+      <a href="{{ '/' | url }}" class="home">
+      <img src="/img/logo.png" alt="" class="logo">
       </a>
+      <div class="logo-text">
+        <p style="font-weight: 900; font-size: 2.2em; margin: 0px;">3D ARTIST</p>
+        <p style="margin: 0px">MODELING - TEXTURING</p>
+      </div>
+
+      <a class="portfolio-anchor" href="/portfolio/3drenders">
+      <div class="portfolio-link">
+        <div class="portfolio-text">
+          <p>PORTFOLIO</p>
+        </div>
+      </div>
+      </a>
+
 
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">

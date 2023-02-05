@@ -21,22 +21,84 @@ header > ul > li {
   margin: 5px 0;
 }
 
-footer {
-  min-width: 145px; /* prevent discord link overflow */
-}
-
 .home {
   align-self: center;
+}
+
+.logo {
+  margin-top: 2em;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0px 5px 0px crimson);
+}
+
+.logo-text {
+  text-align: center;
+  color: white;
+  font-family: system-ui;
+}
+
+.portfolio-anchor {
+  text-align: center;
+  filter: brightness(100%);
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio-link {
+  background-image: url("../img200/portfolio/crate_chroma.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+
+  filter: blur(4px);
+  filter: brightness(50%);
+  min-height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-link:hover {
+  filter: brightness(130%);
+}
+
+.portfolio-text {
+  color:white;
+  font-weight: 900;
+  vertical-align: center;
+}
+
+.portfolio-text p {
+  font-size: 2em;
+  margin-top:0px;
+  filter: drop-shadow(0px 5px 0px #1f1f1f);
+}
+
+.flex1 {
+  background: #155890;
+  min-width: 200px;
+  max-width: 16em;
+  min-height: 1200px;
 }
 
 .nav {
 	display:flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .nav-item > i {
   padding: 5px 10px 5px 10px;
+  color: white;
+}
+
+.nav-item > a {
+  color: white;
 }
 
 .postlist-item {
@@ -125,92 +187,27 @@ code {
   margin: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-  header{
-    width: auto;
-    display: flex;
-    flex-direction: row;
-  }
 
-  header > a > img {
-    height:50px;
-    width:50px;
-  }
 
-  header > ul{
-    margin: 5% 5% 5% 0%;
-  }
-
-  body{
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0px;
-    align-items: center;
-  }
-  .nav{
-    flex-direction:row;
-  }
-
-  .tmpl-post > :is(h1, h2, h3, h4) {
-    text-align: center;
-  }
-
-  .tmpl-post > p {
-    margin-bottom: 20px;
-  }
-
-  .tmpl-post > p li main h2 {
-    max-width: 90vw;
-  }
-
-  img {
-    max-width:35vw;
-  }
-
-  .tmpl-gallery {
-    width: 50vh;
-  }
-
-  .tmpl-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width:90vw;
-  }
-
-  .sidebyside {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: row;
-    FLEX: NONE;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .social-link>a>i {
-    margin: 9px;
-    pointer-events: none;
-    font-size: 20px;
-  }
-
-  .social-link>a {
-    font-size: 0;
-  }
+/* */
+footer {
+  min-width: 145px; /* prevent discord link overflow */
+  margin: 1em;
 }
 
 .social-link {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color:white;
 }
 
 .social-link>a>i {
   padding: 5px 10px 5px 10px;
+  color: white;
 }
+
+.social-link > a {
+  color: white;
+}
+

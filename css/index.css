@@ -37,7 +37,7 @@ a[href] {
   color: var(--blue);
 }
 a[href]:visited {
-  color: var(--navy);
+  /*color: var(--navy); affects nav links too*/ 
 }
 main {
   padding: 1rem;
@@ -135,7 +135,6 @@ code {
   padding: 0;
   list-style: none;
   float: left;
-  margin-left: 1em;
 }
 .nav-item {
   display: inline-block;
@@ -147,6 +146,7 @@ code {
 .nav-item-active {
   font-weight: 700;
   text-decoration: underline;
+  color: white;
 }
 
 /* Posts list */
