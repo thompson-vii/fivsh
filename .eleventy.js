@@ -6,6 +6,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
+const Image = require('@11ty/eleventy-img')
 const path = require('path');
 
 module.exports = function(eleventyConfig) {
@@ -70,6 +71,7 @@ module.exports = function(eleventyConfig) {
     "node_modules/photoswipe/": "/photoswipe/"
   });
   eleventyConfig.addPassthroughCopy("img200");
+  eleventyConfig.addPassthroughCopy("img400");
   eleventyConfig.addPassthroughCopy("webfonts");
 
   // Customize Markdown library and settings:
@@ -134,6 +136,19 @@ module.exports = function(eleventyConfig) {
     thumbnail_path = url.replace("img", "img200");
     return `<a href="${url}" ><img src="${thumbnail_path}"></img></a>`
   });
+
+  async function imageShortcode(src, alt) {
+    let metadata = await Image(src, {
+      widths: [null],
+      formats: ['jpeg'],
+      outputDir: "_site/img400",
+      urlPath: "/img400",
+    });
+  
+    let data = metadata.jpeg[metadata.jpeg.length -1];
+    return `<a href="${src.substring(1)}"><img src="${data.url}" alt="${alt}"></a>`
+  }
+  eleventyConfig.addAsyncShortcode('image400', imageShortcode);
 
   return {
     // Control which files Eleventy will process
