@@ -71,7 +71,6 @@ module.exports = function(eleventyConfig) {
     "node_modules/photoswipe/": "/photoswipe/"
   });
   eleventyConfig.addPassthroughCopy("img200");
-  eleventyConfig.addPassthroughCopy("img400");
   eleventyConfig.addPassthroughCopy("webfonts");
 
   // Customize Markdown library and settings:
@@ -140,9 +139,9 @@ module.exports = function(eleventyConfig) {
   async function imageShortcode(src, alt) {
     let metadata = await Image(src, {
       widths: [null],
-      formats: ['jpeg'],
-      outputDir: "./img400",
-      urlPath: "/img400",
+      formats: ['png', 'jpeg'],
+      outputDir: "/_site/img400/",
+      urlPath: "/img400/",
     });
   
     let data = metadata.jpeg[metadata.jpeg.length -1];
