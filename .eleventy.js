@@ -140,8 +140,8 @@ module.exports = function(eleventyConfig) {
     let metadata = await Image(src, {
       widths: [null],
       formats: ['png', 'jpeg'],
-      outputDir: "./img400/",
-      urlPath: "/img400/",
+      outputDir: '_site/assets/images',
+      urlPath: '/assets/images',
     });
   
     let data = metadata.jpeg[metadata.jpeg.length -1];
