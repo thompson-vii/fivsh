@@ -146,7 +146,10 @@ module.exports = function(eleventyConfig) {
     });
   
     let data = metadata.jpeg[metadata.jpeg.length -1];
-    return `<a href="${src.substring(1)}"><img src="${data.url}" alt="${alt}"></a>`
+    return `<figure class="fig-img">
+              <a href="${src.substring(1)}"><img src="${data.url}" alt="${alt}"></a>
+              <figcaption>${alt}</figcaption>
+            </figure>`
   }
   eleventyConfig.addAsyncShortcode('image400', imageShortcode);
 

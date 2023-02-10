@@ -215,3 +215,16 @@ footer {
   color: white;
 }
 
+.fig-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fig-img > a {
+  margin: 0 auto;
+}
+
+figcaption {
+  font-family: Trebuchet;
+}
