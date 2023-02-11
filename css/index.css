@@ -17,7 +17,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, system-ui, sans-serif;
+  font-family: Arial,Tahoma, Helvetica, "Calibre", -apple-system, sans-serif, system-ui;
   color: var(--darkgray);
   background-color: var(--white);
 }
@@ -27,7 +27,7 @@ p:last-child {
 p,
 .tmpl-post li,
 img {
-  max-width: 37.5em; /* 600px /16 */
+  /*max-width: 37.5em;  600px /16 */
 }
 p,
 .tmpl-post li {
@@ -40,10 +40,10 @@ a[href]:visited {
   /*color: var(--navy); affects nav links too*/ 
 }
 main {
-  padding: 1rem;
+  padding: max(1vw, 2rem);
 }
 main :first-child {
-  margin-top: 0;
+  /*margin-top: 0;*/
 }
 header {
   border-bottom: 1px dashed var(--lightgray);

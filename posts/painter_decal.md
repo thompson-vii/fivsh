@@ -18,16 +18,14 @@ There are two workflows I use.
 
 The addon utilized blender's baker so the same limitation applies here.
 
-Bring out the Addon panel by pressing `N` and click on new scene
+Bring out the Addon panel by pressing `N` and click on "Setup Scene"
 
 {% image400 "./img/painter_decal/grabdoc_new.png", "Addon toolbar"%}
-
-When you set up a new scene with grabdoc you get:
 
 {% image400 "./img/painter_decal/grabdoc_scene.png", "An orthographic camera above the backing plane, the camera is pointing at the plane" %}
 {% image400 "./img/painter_decal/grabdoc_outliner.png", "Objects created when New Scene is created."%}
 
-Three things happen when you add a New Scene.
+Three things happen when you add a Scene.
 1. A square backplate
 2. A orthographic camera above the plane pointing at it. 
 3. The render resolution is set to 2048x2048 pixels  
@@ -132,5 +130,3 @@ Recall the flathead decal I have shown earlier. If you paid attention you might 
 {% image400 "./img/painter_decal/flathead_applied.png", "Incorrect Lighting, using OpenGL normal" %}
 {% image400 "./img/painter_decal/flathead_invert_applied.png", "Correct Lighting, using DirectX normal" %}
 {% endsidebyside %}
-
-Here is two screenshots of the viewport of substance
