@@ -84,10 +84,7 @@ header > ul > li {
 .tmpl-post img {
   max-height: 400px;
   max-width: min(30vw, 300px);
-}
-
-p:last-child {
-  margin-bottom: 0;
+  filter: drop-shadow(3px 3px 1px rgb(132, 163, 189));
 }
 
 .tmpl-post > :is(li, p) {
@@ -177,6 +174,8 @@ figcaption {
   font-size: 1.1rem;
   font-family: Calibri, Trebuchet;
   text-align: center;
+  margin-top: 8px;
+  background-color: aliceblue;
 }
 
 /* Sidebyside figures */
