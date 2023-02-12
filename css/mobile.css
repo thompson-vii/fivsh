@@ -48,14 +48,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 90vw;
     padding: 0.5rem;
-    margin: auto;
   }
 
-  .tmpl-post h1:first-child {
-    margin-bottom: 1rem;
+  .tmpl-post > :is(li, p) {
+    line-height: 1.45;
+    margin: 1em;
+    text-align: justify;
+    font-size: 1.1em;
   }
+  
+  .tmpl-post h1:first-child {
+    margin: 1rem 0 0 0;
+  }
+
   .tmpl-post > time {
     margin: 2em;
    }
