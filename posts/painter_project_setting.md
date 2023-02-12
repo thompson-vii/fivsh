@@ -1,5 +1,5 @@
 ---
-title: Things Substance Painter's Normal Map Format Actually Does
+title: Substance Painter's Normal map format
 description: 
 date: 2022-06-01
 tags:
@@ -8,7 +8,7 @@ tags:
 layout: layouts/post.njk
 ---
 
-{% image "/img/painter_project_setting/painter_project_setting.png" %}
+{% image400 "./img/painter_project_setting/painter_project_setting.png", "Project Setting dialog" %}
 
 I was a bit confused as what exactly happens when changing the normal map format under project setting do.
 
@@ -21,5 +21,5 @@ On the export template there are the `Input maps - Normal` and two converted map
 
 The Normal follows whatever setting the project setting is under. The Converted map, as expected, are not affected.
 
-{% image "/img/painter_project_setting/painter_export_template.png" %}
-{% image "/img/painter_project_setting/painter_project_setting_map_compare.png" %}
+{% image400 "./img/painter_project_setting/painter_export_template.png", "Output Template" %}
+{% image400 "./img/painter_project_setting/painter_project_setting_map_compare.png", "" %}

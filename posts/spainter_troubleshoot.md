@@ -3,14 +3,14 @@ title: Troubleshooting Substance Painter Problems
 description: 
 date: 2022-12-21
 tags:
-	- Pipeline
+    - Pipeline
     - Substance Painter
 layout: layouts/post.njk
 ---
 
 ## Ngons bad
 
-Ngons are problematic due to the way different DCCs triangulates them. It doesn't always cause problems, but in this case it appears that substance painter decided to not give a fuck. 
+Ngons are problematic due to the way different DCCs triangulates them. It doesn't always cause problems, but in this case substance painter fails to triangulate the ngon.
 
 {% image400 "./img/spainter_troubleshoot/spt_ngon.png", "The ngon on the right has edges connected to a single vertex" %}
 

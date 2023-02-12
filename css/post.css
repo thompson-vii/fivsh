@@ -4,7 +4,7 @@ body {
   font-family: Arial,Tahoma, Helvetica, "Calibre", -apple-system, sans-serif, system-ui;
   color: var(--darkgray);
   background-color: var(--white);
-  margin: 0em 3em 0em 3em;
+  margin: 0em 0em 0em 3em;
   justify-content: center;
 }
 
@@ -42,7 +42,7 @@ header > ul > li {
 
 .flex1 {
   background: #155890;
-  min-width: 200px;
+  min-width: 250px;
   max-width: 16em;
   min-height: 1200px;
 }
@@ -78,16 +78,13 @@ header > ul > li {
 }
 
 .tmpl-post {
-  max-width: 60vw;
+
 }
 
 .tmpl-post img {
   max-height: 400px;
-  max-width: min(30vw, 300px);
-}
-
-p:last-child {
-  margin-bottom: 0;
+  max-width: 90%;
+  filter: drop-shadow(6px 6px 3px rgb(132, 163, 189));
 }
 
 .tmpl-post > :is(li, p) {
@@ -99,10 +96,12 @@ p:last-child {
 
 .tmpl-post > :is(h1, h2, h3, h4) {
   text-align: center;
+  margin: 3rem;
 }
+
 .tmpl-post > :is(h2, h3, h4) {
   text-align: center;
-  margin: 2em;
+  margin: 3rem;
 }
 
 code {
@@ -159,6 +158,7 @@ footer {
 
 /* figures */
 
+
 .fig-img {
   display: flex;
   flex-direction: column;
@@ -168,7 +168,7 @@ footer {
 }
 
 .fig-img > a {
-  margin: 0 auto;
+  text-align: center;
 }
 
 figcaption {
@@ -177,6 +177,8 @@ figcaption {
   font-size: 1.1rem;
   font-family: Calibri, Trebuchet;
   text-align: center;
+  margin-top: 16px;
+  background-color: aliceblue;
 }
 
 /* Sidebyside figures */
@@ -185,12 +187,13 @@ figcaption {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin: 2rem;
+  margin: 2rem 0 2rem 0;
   justify-content: center;
 }
 
 .sidebyside > figure {
   display: flex;
+  flex: 1 1 0;
   margin: 0em 1vw 0em 1vw;
 }
 
