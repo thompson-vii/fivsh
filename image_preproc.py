@@ -8,22 +8,22 @@ import imagesize
 
 class SwipeDirectory(NamedTuple):
     json_filename: str
-    dir_fullres: list[PosixPath, ...]
-    dir_thumbnail: list[PosixPath, ...]
+    dir_fullres: list[Path]
+    dir_thumbnail: list[Path]
     
 class ImageData():
     
     
-    def __init__(self, source: PosixPath):
+    def __init__(self, source: Path):
         self.source_path = source
-        self.thumbnail_path: PosixPath = self.derive_thumbnail_path(self.source_path)
+        self.thumbnail_path: Path = self.derive_thumbnail_path(self.source_path)
         self.filename: str = self.source_path.name
         self.json_fullres_path: str = "/" + "/".join(self.source_path.parts[-3:])
         self.json_thumbnail_path: str = "/" + "/".join(self.thumbnail_path.parts[-3:])
         self.alt_text: str
         self.width, self.height = imagesize.get(self.source_path)
     
-    def derive_thumbnail_path(self, source: PosixPath):
+    def derive_thumbnail_path(self, source: Path):
         return Path(str(source).replace("img", "img200"))
 
     def get_json(self):
@@ -36,7 +36,7 @@ class ImageData():
             'height': self.height
         })
         
-def get_files(paths: list[PosixPath, ...], extensions: list[str, ...]) -> list[ImageData]:
+def get_files(paths: list[Path], extensions: list[str]) -> list[ImageData]:
     logging.info(f"Getting files in {paths} matching {extensions}")
 
     image_objects: list[ImageData] = []
@@ -48,7 +48,7 @@ def get_files(paths: list[PosixPath, ...], extensions: list[str, ...]) -> list[I
 
     return image_objects
 
-def write_json(output_dir: PosixPath, filename: str, json_data):
+def write_json(output_dir: Path, filename: str, json_data):
     with open(os.path.join(output_dir, filename), 'w') as f_out:
         logging.info(f"Writting json to {f_out.name}")
         json.dump(json_shit, f_out, indent=4)
@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     ROOT = Path("/home/fivsh")
     OUTPUT_DIR = Path("/home/fivsh/_data/")
-    EXT = ('.jpg', '.png', '.jpeg')
+    EXT = ['.jpg', '.png', '.jpeg']
 
     '''
     swipe = SwipeDirectory("3drenders.json",
