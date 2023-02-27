@@ -1,6 +1,3 @@
 [build]
   publish = "_site"
   command = "DEBUG=* eleventy"
-  
-[build.environment]
-  NODE_VERSION = "lts/*"
