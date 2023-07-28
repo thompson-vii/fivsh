@@ -4,3 +4,4 @@ package-lock.json
 *.Identifier
 *.attrs
 _draft/
+.vscode/
