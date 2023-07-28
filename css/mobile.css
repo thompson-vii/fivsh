@@ -45,9 +45,6 @@
   }
 
   .tmpl-post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0.5rem;
   }
 
@@ -59,7 +56,7 @@
   }
   
   .tmpl-post h1:first-child {
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 2rem 0;
   }
 
   .tmpl-post > time {
