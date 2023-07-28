@@ -21,9 +21,7 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
 }
-p:last-child {
-  margin-bottom: 0;
-}
+
 p,
 .tmpl-post li,
 img {
